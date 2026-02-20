@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CyberSesh - Stacy's Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<audio id="bgMusic" src="bg_music.mp3" loop></audio>
+<audio id="clickSound" src="mouse.mp3" preload="auto"></audio>
+
+<script>
+  // 0.0 is silent, 1.0 is full volume. 
+  // 0.3 is usually a perfect "background" level.
+  document.getElementById("bgMusic").volume = 0.3; 
+</script>
+
+<div id="introPage">
+  <div id="introBox">
+    <div id="bgOverlay"></div>
+
+    <div id="topRectangle">
+      <div id="statusCircles">
+        <span class="redCircle"></span>
+        <span class="greenCircle"></span>
+      </div>
+      <div id="tabs">
+        <span class="tab">School</span>
+        <span class="tab">Work</span>
+        <span class="tab">Gaming</span>
+        <span class="tab">Social Media</span>
+      </div>
+    </div>
+
+    <div id="searchContainer">
+      <div id="navIcons">
+        <span class="navIcon">&lt;</span>
+        <span class="navIcon">&gt;</span>
+        <span class="navIcon reload">&#x21bb;</span>
+      </div>
+      <input type="text" id="searchBar" value="https://cybersesh.com/xstacyrocksx" readonly>
+    </div>
+
+    <div id="siteNav">
+        <span class="s-tab">home</span>
+        <span class="s-tab">browse</span>
+        <span class="s-tab">forums</span>
+        <span class="s-tab">groups</span>
+        <span class="s-tab">profile</span>
+        <span id="msgTab" class="s-tab">messages<span class="notification-dot"></span></span>
+    </div>
+
+    <div id="profileGrid">
+      <div class="col-left">
+        <h2 class="profile-name">Stacy, 18</h2>
+        <div class="neon-box main-info">
+          <img src="stacy.jpeg" class="avatar" alt="Stacy">
+          <div class="status-zone">
+            <span class="stacy-greeting">heyy it's stacy</span>
+            <p>"cat lover 4ever"</p>
+            <span class="online-tag">● online</span>
+          </div>
+        </div>
+
+        <label class="share-label">Contacting Me:</label>
+        <div class="neon-box contact-box">
+          <ul class="contact-list">
+            <li id="msgBtn">Send Message</li>
+            <li>Add Friend</li>
+            <li>Add to Favourites</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <label class="share-label">Share My Profile:</label>
+        <div class="neon-box share-box">
+          <div class="fake-url">https://cybersesh.com/xstacyrocksx</div>
+        </div>
+
+       <label class="share-label about-label">About Me:</label>
+        <div class="neon-box about-box">
+          <div id="introText">
+            • I loveee cats<br>
+            • I love playing Minecraft, Valorant, Fortnite<br>
+            • My favourite bands are Linkin Park, BlackPink, Tokio Hotel<br>
+            • My besties are Sabrina and Kelsey &lt;333<br>
+            • I have a pet dwarf hamster named snowy hehe
+          </div> 
+        </div>
+
+      <img id="glitchOverlay" src="glitch.gif" alt="glitch" />
+      <div id="date">10<span class="blink-colon">:</span>15 PM | 04 October 2025</div>
+    </div>
+  </div>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

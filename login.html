@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cybersesh | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" src="bg_music.mp3" loop></audio>
+  <audio id="clickSound" src="mouse.mp3" preload="auto"></audio>
+
+<script>
+  document.getElementById("bgMusic").volume = 0.3; 
+</script>
+
+  <div id="game-container">
+    
+    <div id="transition-overlay">
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+            <div id="loadingText">LOADING...</div>
+        </div>
+    </div>
+
+    <div id="loginPage">
+      <div id="loginBox">
+        <h1 class="logo">cybersesh</h1>
+
+        <div class="inputBox">
+          <label>username</label>
+          <div class="fakeInput">xstacyrocksx</div>
+        </div>
+
+        <div class="inputBox">
+          <label>password</label>
+          <div class="fakeInput">••••••••</div>
+        </div>
+
+        <button class="login-btn" onclick="startChat()">LOG IN</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

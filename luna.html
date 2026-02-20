@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luna Intro</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="luna.css">
+</head>
+<body>
+
+<audio id="kbSound" src="keyboard.mp3" loop></audio>
+<audio id="glitchSound" src="glitch_sound.mp3" loop></audio>
+<audio id="clickSound" src="mouse.mp3" preload="auto"></audio>
+
+<div id="lunaPage">
+  <p id="lunaText">Click to start...</p>
+  <div id="fadeOverlay"></div>
+  <img id="glitchOverlay" src="glitch.gif" alt="glitch" style="
+  display:none;
+  position:absolute;
+  top:0;
+  left:0;
+  width:960px;
+  height:540px;
+  object-fit:cover;
+  z-index:100;
+  pointer-events:none;
+">
+</div>
+
+<script src="luna.js"></script>
+</body>
+</html>

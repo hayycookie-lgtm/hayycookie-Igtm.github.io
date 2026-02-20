@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CyberSesh Intro</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="intro.css">
+</head>
+
+<body>
+<audio id="bgMusic" src="bg_music.mp3" loop></audio>
+<audio id="clickSound" src="mouse.mp3" preload="auto"></audio>
+
+<script>
+  // 0.0 is silent, 1.0 is full volume. 
+  // 0.3 is usually a perfect "background" level.
+  document.getElementById("bgMusic").volume = 0.3; 
+</script>
+
+<div id="introPage">
+  <div id="introBox">
+    <div id="bgOverlay"></div>
+
+    <div id="topRectangle">
+      <div id="statusCircles">
+        <span class="redCircle"></span>
+        <span class="greenCircle"></span>
+      </div>
+      <div id="tabs">
+        <span class="tab">School</span>
+        <span class="tab">Work</span>
+        <span class="tab">Gaming</span>
+        <span class="tab">Social Media</span>
+      </div>
+    </div>
+
+    <div id="searchContainer">
+      <div id="navIcons">
+        <span class="navIcon">&lt;</span>
+        <span class="navIcon">&gt;</span>
+        <span class="navIcon reload">&#x21bb;</span>
+      </div>
+      <input type="text" id="searchBar" placeholder="https://cybersesh.com" readonly>
+    </div>
+
+    <p id="introText"></p>
+
+    <div id="choiceWords">
+      <span id="yesBtn">YES</span>
+      <span id="noBtn">NO</span>
+    </div>
+
+    <img id="glitchOverlay" src="glitch.gif" alt="glitch" style="display:none;" />
+
+    <div id="date">10<span class="blink-colon">:</span>14 PM | 04 October 2025</div>
+  </div>
+</div>
+
+<div id="fadeOverlay"></div>
+
+<script src="intro.js"></script>
+</body>
+</html>

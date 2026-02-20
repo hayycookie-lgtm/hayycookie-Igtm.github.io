@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CyberSesh - Chat with Luna</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lunachat.css">
+</head>
+<body>
+<audio id="bgMusic" src="bg_music.mp3" loop></audio>
+<audio id="clickSound" src="mouse.mp3" preload="auto"></audio>
+
+<script>
+  // 0.0 is silent, 1.0 is full volume. 
+  // 0.3 is usually a perfect "background" level.
+  document.getElementById("bgMusic").volume = 0.3; 
+</script>
+
+<div id="introPage">
+  <div id="introBox">
+    <div id="bgOverlay"></div>
+
+    <div id="topRectangle">
+      <div id="statusCircles">
+        <span class="redCircle"></span>
+        <span class="greenCircle"></span>
+      </div>
+      <div id="tabs">
+        <span class="tab">School</span>
+        <span class="tab">Work</span>
+        <span class="tab">Gaming</span>
+        <span class="tab">Social Media</span>
+      </div>
+    </div>
+
+    <div id="searchContainer">
+      <div id="navIcons">
+        <span class="navIcon">&lt;</span>
+        <span class="navIcon">&gt;</span>
+        <span class="navIcon reload">&#x21bb;</span>
+      </div>
+      <input type="text" id="searchBar" value="https://cybersesh.com/xstacyrocksx/messages" readonly>
+    </div>
+
+    <<div id="siteNav">
+    <span class="s-tab">home</span>
+    <span class="s-tab">browse</span>
+    <span class="s-tab">forums</span>
+    <span class="s-tab">groups</span>
+    <span class="s-tab">profile</span>
+    <span id="msgTab" class="s-tab">messages</span>
+</div>
+
+    <div id="chatArea">
+      <div id="chatContent"></div>
+    </div>
+
+    <div id="bottomUI">
+      <div id="choiceArea"></div>
+      <div id="bottomBar">
+        <svg class="icon-btn cam-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <div id="inputPill">
+          <div id="fakeInputContainer">
+            <span id="fakePlaceholder">message...</span>
+            <span id="blinkingCursor">|</span>
+          </div>
+        </div>
+        <svg class="icon-btn send-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </div>
+    </div>
+
+    <img id="glitchOverlay" src="glitch.gif" alt="glitch" style="display:none;"/>
+  </div>
+</div>
+
+<script src="lunachat.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body { margin: 0; background: black; font-family: 'VT323', monospace; overflow: hidden; }
+
+#endPage { 
+  width: 960px; height: 540px; display: flex; 
+  justify-content: center; align-items: center; 
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#endBox {
+  width: 900px; height: 504px; 
+  border: 4px solid #ff80c8; 
+  box-shadow: 0 0 20px #ff80c8;
+  background: black; 
+  position: relative; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px;
+}
+
+#glitchBg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: url('glitch_bg.gif') center/cover no-repeat;
+  opacity: 0.6; z-index: 0;
+}
+
+/* SUCCESS NOTIFICATION WINDOW */
+.window-stack { position: relative; width: 500px; height: 260px; z-index: 10; }
+.alert-window { position: absolute; width: 100%; height: 100%; background: #fff0f3; border: 2px solid #000; }
+.main-window { box-shadow: 0 0 15px #ff80c8; z-index: 2; }
+.glitch-bg-1 { top: -6px; left: -6px; opacity: 0.3; border-color: #ff80c8; z-index: 1; }
+
+.window-header { background: #000; color: #fff; padding: 8px 12px; font-family: 'Orbitron'; }
+.header-title { font-size: 14px; letter-spacing: 1px; }
+
+.window-body { padding: 25px; color: #000; }
+.alert-content { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+
+.status-icon {
+    font-size: 40px; color: #009900; font-weight: bold;
+    border: 3px solid #009900; padding: 0 12px; border-radius: 50%;
+}
+
+.success-text { margin: 0; color: #009900; font-family: 'Orbitron'; font-size: 20px; }
+.text-area p { margin: 5px 0; font-size: 20px; line-height: 1.2; }
+
+/* LOG OFF BUTTON */
+.button-row { display: flex; justify-content: center; margin-top: 10px; }
+
+.log-off-btn {
+    background: #ff80c8; 
+    color: white; 
+    border: none;
+    padding: 10px 40px; 
+    font-family: 'VT323'; 
+    font-size: 24px;
+    cursor: pointer; 
+    box-shadow: 4px 4px 0px #99004d;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+.log-off-btn:hover { background: #d64593; box-shadow: 4px 4px 0px #7a003e; }
+.log-off-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #7a003e; }
+
+/* FADE OVERLAY */
+#fadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 2s ease-in-out; /* 2 Second transition */
+}
+
+#fadeOverlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

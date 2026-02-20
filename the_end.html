@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSesh - The End</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="the_end.css">
+</head>
+<body>
+<audio id="bgMusic" src="bg_music.mp3" loop></audio>
+<audio id="clickSound" src="mouse.mp3" preload="auto"></audio>
+
+<script>
+  document.getElementById("bgMusic").volume = 0.3; 
+</script>
+
+<div id="endPage">
+  <div id="endBox">
+    <div id="glitchBg"></div>
+
+    <div class="window-stack">
+        <div class="alert-window glitch-bg-1"></div>
+        <div class="alert-window main-window">
+            <div class="window-header">
+                <span class="header-title">SYSTEM NOTIFICATION</span>
+            </div>
+            <div class="window-body">
+                <div class="alert-content">
+                    <div class="status-icon">✓</div>
+                    <div class="text-area">
+                        <h3 class="success-text">REPORT CONFIRMED</h3>
+                        <p>User <strong>'lunaluvs22'</strong> has been suspended for suspicious activity.</p>
+                        <p>Your data and identity remain safe.</p>
+                    </div>
+                </div>
+                <div class="button-row">
+                    <button class="log-off-btn" id="logOffBtn">LOG OFF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="fadeOverlay"></div>
+
+<script src="the_end.js"></script>
+</body>
+</html>
